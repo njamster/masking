@@ -51,6 +51,7 @@
 			"displayed_emotion": "NEUTRAL",
 			"target_emotion": "NEUTRAL",
 			"text": "Nur jetzt steigt mir das Finanzamt auf die Decke. Nervt total.",
+			"wait_time": 5.0
 		},
 		{
 			"is_player": true,
