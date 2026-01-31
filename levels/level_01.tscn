@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bdoid8lm10fu5"]
+
+[ext_resource type="Script" uid="uid://b1g16r16p7750" path="res://levels/person.gd" id="1_81a5f"]
+[ext_resource type="Script" uid="uid://mv1mmf06ypm4" path="res://levels/level_01.gd" id="1_mckh2"]
+[ext_resource type="Texture2D" uid="uid://bmfvoujvt48tv" path="res://images/head.png" id="1_ty3hu"]
+[ext_resource type="Script" uid="uid://cfnn5ksh5d72m" path="res://levels/masks.gd" id="5_mllcm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mckh2"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_81a5f"]
+bg_color = Color(1, 0, 0, 1)
+
+[node name="Level01" type="Control" unique_id=1536764909]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mckh2")
+
+[node name="OuterMargin" type="MarginContainer" parent="." unique_id=1124497540]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="HBox" type="HBoxContainer" parent="OuterMargin" unique_id=932711430]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Player" type="VBoxContainer" parent="OuterMargin/HBox" unique_id=1704097910]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_81a5f")
+
+[node name="Head" type="TextureRect" parent="OuterMargin/HBox/Player" unique_id=1075498811]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_ty3hu")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Bubble" type="PanelContainer" parent="OuterMargin/HBox/Player" unique_id=454352126]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_mckh2")
+
+[node name="VBox" type="VBoxContainer" parent="OuterMargin/HBox/Player/Bubble" unique_id=1024980114]
+layout_mode = 2
+
+[node name="Dialog" type="RichTextLabel" parent="OuterMargin/HBox/Player/Bubble/VBox" unique_id=1092376294]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
+text = "Test"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Choices" type="HBoxContainer" parent="OuterMargin/HBox/Player/Bubble/VBox" unique_id=538841120]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TimeLeft" type="ProgressBar" parent="OuterMargin/HBox/Player/Bubble/VBox" unique_id=343913413]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_81a5f")
+value = 65.0
+show_percentage = false
+
+[node name="Opponent" type="VBoxContainer" parent="OuterMargin/HBox" unique_id=2092370371]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_81a5f")
+
+[node name="Bubble" type="PanelContainer" parent="OuterMargin/HBox/Opponent" unique_id=1611155688]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mckh2")
+
+[node name="VBox" type="VBoxContainer" parent="OuterMargin/HBox/Opponent/Bubble" unique_id=841617196]
+layout_mode = 2
+
+[node name="Dialog" type="RichTextLabel" parent="OuterMargin/HBox/Opponent/Bubble/VBox" unique_id=851158915]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 64
+theme_override_font_sizes/bold_font_size = 64
+bbcode_enabled = true
+text = "Test"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Choices" type="HBoxContainer" parent="OuterMargin/HBox/Opponent/Bubble/VBox" unique_id=2032072643]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TimeLeft" type="ProgressBar" parent="OuterMargin/HBox/Opponent/Bubble/VBox" unique_id=1363293741]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_81a5f")
+value = 65.0
+show_percentage = false
+
+[node name="Head" type="TextureRect" parent="OuterMargin/HBox/Opponent" unique_id=627177562]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_ty3hu")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="Masks" type="VBoxContainer" parent="." unique_id=430644406]
+layout_mode = 0
+offset_top = 200.0
+offset_right = 128.0
+offset_bottom = 648.0
+theme_override_constants/separation = 32
+script = ExtResource("5_mllcm")

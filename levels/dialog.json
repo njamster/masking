@@ -1,0 +1,28 @@
+{
+	"mask_count": 3,
+	"main": [
+		{
+			"text": "Hi!",
+		},
+		{
+			"is_player": true,
+			"text": "Hey!",
+		},
+		{
+			"text": "You [b]suck[/b] ass!",
+		},
+		{
+			"text": "LOL",
+		},
+		{
+			"is_player": true,
+			"text": "Excuse me?!",
+		},
+	],
+	"interrupts": [
+		{
+			"text": "You think that's funny!?!",
+			"duration": 5
+		},
+	],
+}

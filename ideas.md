@@ -1,0 +1,9 @@
+- Emotionen (Mund lachen/neutral/traurig, Augenbrauen)
+- Lip-Sync (Mund auf/zu)
+- Blinzeln/Augen offenhalten
+- Mirroren
+- Dialog-Reaktion/Antworten
+	- Worte klicken
+	- Wortwolke
+	- Lückentext
+- Ablenkungen?
