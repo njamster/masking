@@ -13,6 +13,8 @@ var replies
 var current_line_id := -1
 var target_emotion := ""
 
+var tutorial_active := true
+
 
 func _enter_tree() -> void:
 	_load_dialog_data("res://levels/dialog.json")
@@ -34,8 +36,14 @@ func _load_dialog_data(path: String):
 
 
 func _ready() -> void:
+	_set_initial_state()
 	_connect_signals()
 	_play_level_intro()
+
+
+func _set_initial_state() -> void:
+	%Player/Face/ChangeEyes.hide()
+	%Player/Face/ChangeMouth.hide()
 
 
 func _connect_signals() -> void:
@@ -106,6 +114,10 @@ func load_next_line() -> void:
 
 	if data.has("target_emotion") and %Player.current_emotion != data["target_emotion"]:
 		target_emotion = data["target_emotion"]
+		if tutorial_active:
+			%Player/Face/ChangeEyes.show()
+			%Player/Face/ChangeMouth.show()
+			tutorial_active = false
 
 	if data.has("wait_time"):
 		$WaitTime.wait_time = data["wait_time"]
