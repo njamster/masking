@@ -6,6 +6,57 @@
 [ext_resource type="Texture2D" uid="uid://cppuhptuo5lub" path="res://face/images/eyes_neutral.png" id="3_vxr1s"]
 [ext_resource type="Texture2D" uid="uid://drribuy3pmddo" path="res://face/images/mouth_neutral.png" id="5_ke48r"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuo0k"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.6, 0.6, 0.6, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxr1s"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.4)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.6, 0.6, 0.6, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ke48r"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.2)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.6, 0.6, 0.6, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+corner_detail = 5
+
 [node name="Face" type="TextureRect" unique_id=906766418]
 size_flags_vertical = 3
 texture = ExtResource("1_utt0w")
@@ -67,6 +118,10 @@ offset_top = 220.0
 offset_right = 240.5
 offset_bottom = 450.0
 grow_horizontal = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vuo0k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vxr1s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ke48r")
 
 [node name="ChangeMouth" type="Button" parent="." unique_id=433537918]
 layout_mode = 1
@@ -78,3 +133,7 @@ offset_top = 550.0
 offset_right = 240.5
 offset_bottom = 750.0
 grow_horizontal = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_vuo0k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vxr1s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ke48r")
