@@ -63,9 +63,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -240.5
-offset_top = 250.0
+offset_top = 220.0
 offset_right = 240.5
-offset_bottom = 480.0
+offset_bottom = 450.0
 grow_horizontal = 2
 
 [node name="ChangeMouth" type="Button" parent="." unique_id=433537918]
@@ -74,7 +74,7 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -240.5
-offset_top = 600.0
+offset_top = 550.0
 offset_right = 240.5
-offset_bottom = 800.0
+offset_bottom = 750.0
 grow_horizontal = 2

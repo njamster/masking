@@ -39,7 +39,6 @@ func _change_eyes() -> void:
 			$Eyes.texture = EYES_SAD
 		EYES_SAD:
 			$Eyes.texture = EYES_HAPPY
-	$ChangeMouth.pressed.connect(_change_mouth)
 
 
 func _change_mouth() -> void:
