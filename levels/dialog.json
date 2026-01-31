@@ -86,7 +86,26 @@
 			"wait_time": 0.5
 		},
 		{
+			"displayed_emotion": "NEUTRAL",
+			"text": "Außerdem muss ich leider schon wieder weiter.",
+		},
+		{
+			"displayed_emotion": "HAPPY",
+			"target_emotion": "SAD",
+			"text": "Traurig für dich, ich weiß, aber vielleicht sehen wir uns mal wieder!",
 			"wait_time": 2.0
+		},
+		{
+			"text": "Tschüss!",
+		},
+		{
+			"is_player": true,
+			"text": "Tschüss!"
+		},
+		{
+			"is_player": true,
+			"displayed_emotion": "NEUTRAL",
+			"text": "Boah, ist der Typ anstrengend."
 		}
 	],
 }
