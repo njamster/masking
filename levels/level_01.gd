@@ -62,7 +62,7 @@ func _play_level_intro() -> void:
 	await tween.finished
 
 	for i in range(mask_count):
-		$Masks.add_mask()
+		%Masks.add_mask()
 		await get_tree().create_timer(0.2).timeout
 
 	load_next_line()
@@ -124,6 +124,6 @@ func load_reply(emotion: String) -> void:
 	var text = replies[emotion][randi() % replies[emotion].size()]
 	var text_speed = text.length() / chars_per_second
 	%Opponent.say(text, PRE_LINE_DELAY, text_speed, POST_LINE_DELAY)
-	$Masks.deplete_mask()
+	%Masks.deplete_mask()
 	await get_tree().create_timer(PRE_LINE_DELAY + text_speed + POST_LINE_DELAY).timeout
 	load_next_line()

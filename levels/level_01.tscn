@@ -125,12 +125,12 @@ show_percentage = false
 [node name="Face" parent="OuterMargin/HBox/Opponent" unique_id=857911119 instance=ExtResource("3_mllcm")]
 layout_mode = 2
 
-[node name="Masks" type="VBoxContainer" parent="." unique_id=430644406]
-layout_mode = 0
-offset_top = 200.0
-offset_right = 128.0
-offset_bottom = 648.0
-theme_override_constants/separation = 32
+[node name="Masks" type="VBoxContainer" parent="OuterMargin" unique_id=430644406]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 8
 script = ExtResource("5_mllcm")
 
 [node name="WaitTime" type="Timer" parent="." unique_id=411682845]
