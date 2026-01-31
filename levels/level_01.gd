@@ -39,18 +39,18 @@ func _ready() -> void:
 
 
 func _play_level_intro() -> void:
-	## wait one frame (so we can change the position)
-	#await get_tree().process_frame
-#
-	#$%Opponent.position.x += 1000
-#
-	#var tween = get_tree().create_tween()
-	#tween.tween_property($%Opponent, "position:x", -1000, 1.0).as_relative()
-	#await tween.finished
-#
-	#for i in range(mask_count):
-		#$Masks.add_mask()
-		#await get_tree().create_timer(0.2).timeout
+	# wait one frame (so we can change the position)
+	await get_tree().process_frame
+
+	$%Opponent.position.x += 1000
+
+	var tween = get_tree().create_tween()
+	tween.tween_property($%Opponent, "position:x", -1000, 1.0).as_relative()
+	await tween.finished
+
+	for i in range(mask_count):
+		$Masks.add_mask()
+		await get_tree().create_timer(0.2).timeout
 
 	await get_tree().create_timer(CONVERSATION_DELAY).timeout
 
@@ -71,4 +71,11 @@ func load_next_line() -> void:
 	var text_speed = data.text.length() / chars_per_second
 
 	if data.has("is_player") and data.is_player:
-		%Player.say
+		%Player.say(data.text, PRE_LINE_DELAY, text_speed, POST_LINE_DELAY)
+		%Opponent.hide_bubble()
+	else:
+		%Opponent.say(data.text, PRE_LINE_DELAY, text_speed, POST_LINE_DELAY)
+		%Player.hide_bubble()
+
+	await get_tree().create_timer(PRE_LINE_DELAY + text_speed + POST_LINE_DELAY).timeout
+	load_next_line()

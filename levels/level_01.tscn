@@ -42,20 +42,20 @@ theme_override_constants/margin_bottom = 32
 
 [node name="HBox" type="HBoxContainer" parent="OuterMargin" unique_id=932711430]
 layout_mode = 2
-theme_override_constants/separation = 32
+theme_override_constants/separation = -128
 
 [node name="Player" type="VBoxContainer" parent="OuterMargin/HBox" unique_id=1704097910]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 32
 script = ExtResource("1_81a5f")
 
 [node name="Head" type="TextureRect" parent="OuterMargin/HBox/Player" unique_id=1075498811]
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("1_ty3hu")
-expand_mode = 1
-stretch_mode = 3
+stretch_mode = 5
 
 [node name="Bubble" type="PanelContainer" parent="OuterMargin/HBox/Player" unique_id=454352126]
 custom_minimum_size = Vector2(0, 256)
@@ -91,6 +91,7 @@ show_percentage = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 32
 script = ExtResource("1_81a5f")
 
 [node name="Bubble" type="PanelContainer" parent="OuterMargin/HBox/Opponent" unique_id=1611155688]
@@ -127,8 +128,7 @@ show_percentage = false
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("1_ty3hu")
-expand_mode = 1
-stretch_mode = 3
+stretch_mode = 5
 
 [node name="Masks" type="VBoxContainer" parent="." unique_id=430644406]
 layout_mode = 0
