@@ -7,7 +7,6 @@ var time_left_tween
 
 @onready var BUBBLE = $Bubble
 @onready var DIALOG = BUBBLE.get_node("VBox/Dialog")
-@onready var CHOICES = BUBBLE.get_node("VBox/Choices")
 @onready var TIME_LEFT = BUBBLE.get_node("VBox/TimeLeft")
 
 var current_emotion := "NEUTRAL":
@@ -28,7 +27,6 @@ func _set_initial_state() -> void:
 
 
 func say(text: String, pre_delay: float, text_speed: float, post_delay: float) -> void:
-	CHOICES.hide()
 	DIALOG.show()
 
 	show_bubble()
