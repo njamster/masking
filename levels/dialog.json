@@ -1,6 +1,9 @@
 {
 	"mask_count": 7,
 	"replies": {
+		"": [
+			"Ich kann dich echt gar nicht lesen.",
+		],
 		"HAPPY": [
 			"Findest du das etwa lustig?!",
 		],
@@ -78,7 +81,7 @@
 		{
 			"displayed_emotion": "HAPPY",
 			"target_emotion": "HAPPY",
-			"text": "Aber ich hab ja jetzt so viel Geld, dass mich das gar nicht betrifft!",
+			"text": "Aber nice, dass ich jetzt so viel Geld habe, dass mich das gar nicht betrifft!",
 			"wait_time": 0.5
 		},
 		{
