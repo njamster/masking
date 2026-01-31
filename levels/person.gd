@@ -59,4 +59,5 @@ func show_time_left(time: float) -> void:
 func hide_time_left() -> void:
 	TIME_LEFT.modulate.a = 0.0
 
-	time_left_tween.kill()
+	if time_left_tween:
+		time_left_tween.kill()
