@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ss30k0s1cm3n"
-path="res://.godot/imported/player_sad_mouth.png-efaa8ba2fb7b09412e0452a5ab06d0f2.ctex"
+uid="uid://drribuy3pmddo"
+path="res://.godot/imported/mouth_neutral.png-5b56da97e946761bdbc47926fff4d193.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/player_sad_mouth.png"
-dest_files=["res://.godot/imported/player_sad_mouth.png-efaa8ba2fb7b09412e0452a5ab06d0f2.ctex"]
+source_file="res://face/images/mouth_neutral.png"
+dest_files=["res://.godot/imported/mouth_neutral.png-5b56da97e946761bdbc47926fff4d193.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b1g16r16p7750" path="res://levels/person.gd" id="1_81a5f"]
 [ext_resource type="Script" uid="uid://mv1mmf06ypm4" path="res://levels/level_01.gd" id="1_mckh2"]
-[ext_resource type="Texture2D" uid="uid://bmfvoujvt48tv" path="res://images/head.png" id="1_ty3hu"]
+[ext_resource type="PackedScene" uid="uid://cda5btty0na6f" path="res://face/face.tscn" id="3_mllcm"]
 [ext_resource type="Script" uid="uid://cfnn5ksh5d72m" path="res://levels/masks.gd" id="5_mllcm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mckh2"]
@@ -51,11 +51,9 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 32
 script = ExtResource("1_81a5f")
 
-[node name="Head" type="TextureRect" parent="OuterMargin/HBox/Player" unique_id=1075498811]
+[node name="Face" parent="OuterMargin/HBox/Player" unique_id=906766418 instance=ExtResource("3_mllcm")]
 layout_mode = 2
-size_flags_vertical = 3
-texture = ExtResource("1_ty3hu")
-stretch_mode = 5
+is_player = true
 
 [node name="Bubble" type="PanelContainer" parent="OuterMargin/HBox/Player" unique_id=454352126]
 custom_minimum_size = Vector2(0, 256)
@@ -124,11 +122,8 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_81a5f")
 value = 65.0
 show_percentage = false
 
-[node name="Head" type="TextureRect" parent="OuterMargin/HBox/Opponent" unique_id=627177562]
+[node name="Face" parent="OuterMargin/HBox/Opponent" unique_id=857911119 instance=ExtResource("3_mllcm")]
 layout_mode = 2
-size_flags_vertical = 3
-texture = ExtResource("1_ty3hu")
-stretch_mode = 5
 
 [node name="Masks" type="VBoxContainer" parent="." unique_id=430644406]
 layout_mode = 0

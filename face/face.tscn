@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cda5btty0na6f"]
+
+[ext_resource type="Texture2D" uid="uid://bmfvoujvt48tv" path="res://face/images/head.png" id="1_utt0w"]
+[ext_resource type="Texture2D" uid="uid://bqcd3bdx563te" path="res://face/images/eyes_happy.png" id="2_0g68n"]
+[ext_resource type="Script" uid="uid://moi53l0621o" path="res://face/face.gd" id="2_vuo0k"]
+[ext_resource type="Texture2D" uid="uid://cr0okcojjs71k" path="res://face/images/nose.png" id="3_vuo0k"]
+[ext_resource type="Texture2D" uid="uid://d0j5r61tcwwbj" path="res://face/images/mouth_happy.png" id="4_vxr1s"]
+
+[node name="Face" type="TextureRect" unique_id=906766418]
+size_flags_vertical = 3
+texture = ExtResource("1_utt0w")
+stretch_mode = 5
+script = ExtResource("2_vuo0k")
+
+[node name="Eyes" type="TextureRect" parent="." unique_id=569517262]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.5
+offset_top = -387.5
+offset_right = 240.5
+offset_bottom = 387.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0g68n")
+
+[node name="Nose" type="TextureRect" parent="." unique_id=299909656]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.5
+offset_top = -387.5
+offset_right = 240.5
+offset_bottom = 387.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_vuo0k")
+
+[node name="Mouth" type="TextureRect" parent="." unique_id=1866154118]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.5
+offset_top = -387.5
+offset_right = 240.5
+offset_bottom = 387.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_vxr1s")
+
+[node name="ChangeEyes" type="Button" parent="." unique_id=1662508606]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.5
+offset_top = 250.0
+offset_right = 240.5
+offset_bottom = 480.0
+grow_horizontal = 2
+
+[node name="ChangeMouth" type="Button" parent="." unique_id=433537918]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.5
+offset_top = 600.0
+offset_right = 240.5
+offset_bottom = 800.0
+grow_horizontal = 2
