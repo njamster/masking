@@ -35,7 +35,7 @@ func say(text: String, pre_delay: float, text_speed: float, post_delay: float) -
 
 	DIALOG.visible_ratio = 0.0
 	var tween := get_tree().create_tween()
-	tween.tween_property(DIALOG, "visible_ratio", 1.0, text_speed).set_delay(pre_delay)
+	tween.tween_property(DIALOG, "visible_characters", text.length(), text_speed).set_delay(pre_delay)
 
 
 func show_bubble() -> void:

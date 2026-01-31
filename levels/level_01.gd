@@ -3,7 +3,7 @@ extends Control
 const PRE_LINE_DELAY := 0.5  # seconds
 const POST_LINE_DELAY := 1.5  # seconds
 
-@export var chars_per_second = 15
+@export var chars_per_second = 15.0
 
 var mask_count
 
