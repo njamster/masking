@@ -75,6 +75,13 @@ func _play_level_intro() -> void:
 
 	load_next_line()
 
+func _play_level_outro() -> void:
+	# wait one frame (so we can change the position)
+	await get_tree().process_frame
+
+	var tween = get_tree().create_tween()
+	tween.tween_property($%Opponent, "position:x", +1000, 1.0).as_relative()
+	await tween.finished
 
 func load_next_line() -> void:
 	target_emotion = ""
@@ -125,6 +132,9 @@ func load_next_line() -> void:
 		if target_emotion:
 			%Opponent.show_time_left(data["wait_time"])
 		return  # early
+
+	if data.has("stage") and data["stage"] == "outro":
+		_play_level_outro()
 
 	await get_tree().create_timer(POST_LINE_DELAY).timeout
 
