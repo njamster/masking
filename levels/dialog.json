@@ -103,8 +103,15 @@
 			"text": "Tschüss!"
 		},
 		{
+			"stage": "outro"
+		},
+		{
 			"is_player": true,
 			"displayed_emotion": "NEUTRAL",
+			"wait_time": 2.0
+		},
+		{
+			"is_player": true,
 			"text": "Boah, ist der Typ anstrengend."
 		},
 		{
