@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cda5btty0na6f"]
 
 [ext_resource type="Texture2D" uid="uid://bmfvoujvt48tv" path="res://face/images/head.png" id="1_utt0w"]
-[ext_resource type="Texture2D" uid="uid://bqcd3bdx563te" path="res://face/images/eyes_happy.png" id="2_0g68n"]
 [ext_resource type="Script" uid="uid://moi53l0621o" path="res://face/face.gd" id="2_vuo0k"]
 [ext_resource type="Texture2D" uid="uid://cr0okcojjs71k" path="res://face/images/nose.png" id="3_vuo0k"]
-[ext_resource type="Texture2D" uid="uid://d0j5r61tcwwbj" path="res://face/images/mouth_happy.png" id="4_vxr1s"]
+[ext_resource type="Texture2D" uid="uid://cppuhptuo5lub" path="res://face/images/eyes_neutral.png" id="3_vxr1s"]
+[ext_resource type="Texture2D" uid="uid://drribuy3pmddo" path="res://face/images/mouth_neutral.png" id="5_ke48r"]
 
 [node name="Face" type="TextureRect" unique_id=906766418]
 size_flags_vertical = 3
@@ -25,7 +25,7 @@ offset_right = 240.5
 offset_bottom = 387.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_0g68n")
+texture = ExtResource("3_vxr1s")
 
 [node name="Nose" type="TextureRect" parent="." unique_id=299909656]
 layout_mode = 1
@@ -55,7 +55,7 @@ offset_right = 240.5
 offset_bottom = 387.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_vxr1s")
+texture = ExtResource("5_ke48r")
 
 [node name="ChangeEyes" type="Button" parent="." unique_id=1662508606]
 layout_mode = 1

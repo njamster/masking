@@ -22,8 +22,8 @@ func _ready() -> void:
 
 
 func _set_initial_state() -> void:
-	$Eyes.texture = EYES_HAPPY
-	$Mouth.texture = MOUTH_HAPPY
+	$Eyes.texture = EYES_NEUTRAL
+	$Mouth.texture = MOUTH_NEUTRAL
 
 
 func _connect_signals() -> void:
@@ -39,6 +39,7 @@ func _change_eyes() -> void:
 			$Eyes.texture = EYES_SAD
 		EYES_SAD:
 			$Eyes.texture = EYES_HAPPY
+	_update_current_emotion()
 
 
 func _change_mouth() -> void:
@@ -49,3 +50,28 @@ func _change_mouth() -> void:
 			$Mouth.texture = MOUTH_SAD
 		MOUTH_SAD:
 			$Mouth.texture = MOUTH_HAPPY
+	_update_current_emotion()
+
+
+func _update_current_emotion() -> void:
+	if $Mouth.texture == MOUTH_HAPPY and $Eyes.texture == EYES_HAPPY:
+		get_parent().current_emotion = "HAPPY"
+	elif $Mouth.texture == MOUTH_NEUTRAL and $Eyes.texture == EYES_NEUTRAL:
+		get_parent().current_emotion = "NEUTRAL"
+	elif $Mouth.texture == MOUTH_SAD and $Eyes.texture == EYES_SAD:
+		get_parent().current_emotion = "SAD"
+	else:
+		get_parent().current_emotion = ""
+
+
+func set_emotion(emotion: String) -> void:
+	match emotion:
+		"HAPPY":
+			$Eyes.texture = EYES_HAPPY
+			$Mouth.texture = MOUTH_HAPPY
+		"NEUTRAL":
+			$Eyes.texture = EYES_NEUTRAL
+			$Mouth.texture = MOUTH_NEUTRAL
+		"SAD":
+			$Eyes.texture = EYES_SAD
+			$Mouth.texture = MOUTH_SAD

@@ -1,28 +1,38 @@
 {
 	"mask_count": 3,
-	"main": [
+	"replies": {
+		"HAPPY": [
+			"You think that's funny!?!",
+		],
+		"NEUTRAL": [
+			"Cold as ice, huh?",
+		],
+		"SAD": [
+			"You look sad...",
+		],
+	},
+	"dialog": [
 		{
-			"text": "Hi!",
+			"wait_time": 0.5,
+		},
+		{
+			"target_emotion": "HAPPY",
+			"displayed_emotion": "HAPPY",
+			"text": "Hi! Are you happy to see me?",
 		},
 		{
 			"is_player": true,
 			"text": "Hey!",
 		},
 		{
-			"text": "You [b]suck[/b] ass!",
+			"target_emotion": "SAD",
+			"displayed_emotion": "SAD",
+			"text": "My whole family just died in a car crash.....",
+			"wait_time": 5.0
 		},
 		{
-			"text": "LOL",
-		},
-		{
-			"is_player": true,
-			"text": "Excuse me?!",
-		},
-	],
-	"interrupts": [
-		{
-			"text": "You think that's funny!?!",
-			"duration": 5
+			"displayed_emotion": "HAPPY",
+			"text": "I inherited a [b]TON[/b] of money, though..."
 		},
 	],
 }

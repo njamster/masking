@@ -1,7 +1,7 @@
 extends VBoxContainer
 
 
-signal choice_made(text: String)
+signal current_emotion_changed()
 
 var time_left_tween
 
@@ -9,6 +9,12 @@ var time_left_tween
 @onready var DIALOG = BUBBLE.get_node("VBox/Dialog")
 @onready var CHOICES = BUBBLE.get_node("VBox/Choices")
 @onready var TIME_LEFT = BUBBLE.get_node("VBox/TimeLeft")
+
+var current_emotion := "NEUTRAL":
+	set(value):
+		if current_emotion != value:
+			current_emotion = value
+			current_emotion_changed.emit()
 
 
 func _ready() -> void:

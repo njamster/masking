@@ -132,3 +132,6 @@ offset_right = 128.0
 offset_bottom = 648.0
 theme_override_constants/separation = 32
 script = ExtResource("5_mllcm")
+
+[node name="WaitTime" type="Timer" parent="." unique_id=411682845]
+one_shot = true
