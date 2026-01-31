@@ -71,6 +71,7 @@ func _play_level_intro() -> void:
 func load_next_line() -> void:
 	target_emotion = ""
 	$WaitTime.stop()
+	%Opponent.hide_time_left()
 
 	if current_line_id == dialog_data.size() - 1:
 		%Opponent.hide_bubble()
