@@ -2,13 +2,13 @@
 	"mask_count": 7,
 	"replies": {
 		"HAPPY": [
-			"You think that's funny!?!",
+			"Findest du das etwa lustig?!",
 		],
 		"NEUTRAL": [
-			"Cold as ice, huh?",
+			"Hm, interessiert dich wohl nicht.",
 		],
 		"SAD": [
-			"You look sad...",
+			"Warum das lange Gesicht?",
 		],
 	},
 	"dialog": [
@@ -18,21 +18,71 @@
 		{
 			"target_emotion": "HAPPY",
 			"displayed_emotion": "HAPPY",
-			"text": "Hi! Are you happy to see me?",
+			"text": "Hi! Na, freust du dich nicht, mich zu sehen?",
 		},
 		{
 			"is_player": true,
-			"text": "Hey!",
+			"text": "Hey! Ja, klar, wie gehts dir?",
 		},
 		{
 			"target_emotion": "SAD",
 			"displayed_emotion": "SAD",
-			"text": "My whole family just died in a car crash.....",
+			"text": "Leider nicht so gut. Meine schwippschwägerisch angeheiratete Urgroßcousine zweiten Grades Wilhelmine ist gestern gestorben.",
 			"wait_time": 5.0
 		},
 		{
-			"displayed_emotion": "HAPPY",
-			"text": "I inherited a [b]TON[/b] of money, though..."
+			"is_player": true,
+			"text": "Oh nein! Mein Beileid!"
 		},
+		{
+			"text": "Danke.",
+			"displayed_emotion": "NEUTRAL",
+		},
+		{
+			"displayed_emotion": "HAPPY",
+			"target_emotion": "HAPPY",
+			"text": "Dafür hat sie mir [i]richtig[/i] viel Geld vermacht! Geil, oder?",
+			"wait_time": 5.0
+		},
+		{
+			"displayed_emotion": "NEUTRAL",
+			"target_emotion": "NEUTRAL",
+			"text": "Nur jetzt steigt mir das Finanzamt auf die Decke. Nervt total.",
+		},
+		{
+			"is_player": true,
+			"text": "Oh ja, verstehe ich. Hast du eine Steuerberatung?",
+		},
+		{
+			"text": "Ja, klar!",
+			"displayed_emotion": "HAPPY",
+		},
+		{
+			"text": "Achso, nein, nicht mehr. Wilhelmine hat immer meine Steuern gemacht.",
+			"displayed_emotion": "SAD",
+			"target_emotion": "SAD",
+			"wait_time": 3.0
+		},
+		{
+			"displayed_emotion": "HAPPY",
+			"target_emotion": "HAPPY",
+			"text": "Aber dafür gibt es ja jetzt KI!",
+			"wait_time": 2.0
+		},
+		{
+			"displayed_emotion": "SAD",
+			"target_emotion": "SAD",
+			"text": "Schade, dass sie unser aller Jobs wegnehmen wird.",
+			"wait_time": 1.0
+		},
+		{
+			"displayed_emotion": "HAPPY",
+			"target_emotion": "HAPPY",
+			"text": "Aber ich hab ja jetzt so viel Geld, dass mich das gar nicht betrifft!",
+			"wait_time": 0.5
+		},
+		{
+			"wait_time": 2.0
+		}
 	],
 }
